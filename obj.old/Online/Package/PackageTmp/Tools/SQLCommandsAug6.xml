@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+  <command type="create">
+    CREATE TABLE SentRemindersLogTbl (
+    [ReminderID] AUTOINCREMENT,
+    [CustomerID] INT,
+    [DateSentReminder] DateTime,
+    [NextPrepDate] DateTime,
+    [ReminderSent] YESNO,
+    [HadAutoFulfilItem] YESNO,
+    [HadReoccurItems] YESNO,
+    CONSTRAINT [pk_ReminderID] PRIMARY KEY (ReminderID)
+    )
+  </command>
+</commands>
+

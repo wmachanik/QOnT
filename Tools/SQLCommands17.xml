@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="alter">
+		ALTER TABLE PriceLevelsTbl
+		ADD CONSTRAINT UPL_PriceLevelDesc UNIQUE (PriceLevelDesc)
+	</command>
+	<command type="alter">
+		ALTER TABLE PaymentTermsTbl
+		ADD CONSTRAINT UPT_PaymentTermDesc UNIQUE (PaymentTermDesc)
+	</command>
+	<command type="alter">
+		ALTER TABLE InvoiceTypeTbl
+		ADD CONSTRAINT UIT_InvoiceTypeDesc UNIQUE (InvoiceTypeDesc)
+	</command>
+	<command type="insert">
+		INSERT INTO InvoiceTypeTbl (InvoiceTypeDesc, Enabled, Notes)
+		VALUES        ("standard",True,"A standard type of invoice")
+	</command>
+	<command type="insert">
+		INSERT INTO InvoiceTypeTbl (InvoiceTypeDesc, Enabled, Notes)
+		VALUES        ("delivery note",True,"delivery note only")
+	</command>
+	<command type="insert">
+		INSERT INTO InvoiceTypeTbl (InvoiceTypeDesc, Enabled, Notes)
+		VALUES        ("dispatch note",True,"for dispatching courier items")
+	</command>
+	<command type="insert">
+		INSERT INTO InvoiceTypeTbl (InvoiceTypeDesc, Enabled, Notes)
+		VALUES        ("gift",True,"for items sent as gifts")
+	</command>
+	<command type="insert">
+		INSERT INTO InvoiceTypeTbl (InvoiceTypeDesc, Enabled, Notes)
+		VALUES        ("cash receipt",True,"for a point of sale / front office sale")
+	</command>
+</commands>
+

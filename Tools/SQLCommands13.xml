@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="disable"> 
+		DROP TABLE PaymentTermsTbl
+	</command>
+  <command type="create">
+		CREATE TABLE CustomersAccInfoTbl (
+			CustomersAccInfoID AUTOINCREMENT,
+			CustomerID INT,
+			RequiresPurchOrder YESNO,
+			CustomerVATNo VARCHAR(30),C:\MyDocuments\Projects\Websites\TrackerDotNet\TrackerDotNet\Tools\SQLCommands13.xml
+			BillAddr1 VARCHAR(50),
+			BillAddr2 VARCHAR(50),
+			BillAddr3 VARCHAR(50),
+			BillAddr4 VARCHAR(50),
+			BillAddr5 VARCHAR(50),
+			ShipAddr1 VARCHAR(50),
+			ShipAddr2 VARCHAR(50),
+			ShipAddr3 VARCHAR(50),
+			ShipAddr4 VARCHAR(50),
+			ShipAddr5 VARCHAR(50),
+			AccEmail VARCHAR(50),
+			AltAccEmail VARCHAR(50),
+			PaymentTermsID INT,
+			Limit SINGLE,
+			FullCoName VARCHAR(50),
+			AccFirstName VARCHAR(50),
+			AccLastName VARCHAR(50),
+			AltAccFirstName VARCHAR(50),
+			AltAccLastName VARCHAR(50),
+			PriceLevelID INT,
+			InvoiceTypeID INT,
+			RegNo VARCHAR(30),
+			BankAccNo VARCHAR(30),
+			BankBranch VARCHAR(50),
+			Enabled YESNO,
+			[Notes] MEMO,
+	  	CONSTRAINT [pk_CustomersAccInfoID] PRIMARY KEY (CustomersAccInfoID)
+		)
+  </command>
+  <command type="create">
+		CREATE TABLE PaymentTermsTbl (
+		  PaymentTermsID AUTOINCREMENT,
+			[PaymentTermsDesc] VARCHAR(20),
+			[PaymentDays] INT,
+			[DayOfMonth] INT,
+			[UseDays] YESNO,
+			[Enabled] YESNO,
+			[Notes] MEMO,
+		CONSTRAINT [pk_PaymentTermsID] PRIMARY KEY (PaymentTermsID) 
+		)
+	</command>
+  <command type="create">
+		CREATE TABLE PriceLevelsTbl (
+			PriceLevelID AUTOINCREMENT,
+			[PriceLevelDesc] VARCHAR(20),
+			[PricingFactor] SINGLE,
+			[Enabled] YESNO,
+			[Notes] MEMO,
+		CONSTRAINT [pk_PriceLevelID ] PRIMARY KEY (PriceLevelID) 
+		)
+  </command>
+  <command type="create">
+		CREATE TABLE InvoiceTypeTbl (
+			InvoiceTypeID AUTOINCREMENT,
+			[InvoiceTypeDesc] VARCHAR(20),
+			[Enabled] YESNO,
+			[Notes] MEMO,
+		CONSTRAINT [pk_InvoiceTypeID ] PRIMARY KEY (InvoiceTypeID) 
+		)
+	</command>
+  <command type="alter">
+    ALTER TABLE OrdersTbl ADD PurchaseOrder VARCHAR(30)
+	</command>
+  <command type="alter">
+    ALTER TABLE OrdersTbl ADD InvoiceDone YESNO
+	</command>
+  <command type="alter">
+		ALTER TABLE ItemTypeTbl ADD BasePrice SINGLE
+	</command>
+</commands>
+

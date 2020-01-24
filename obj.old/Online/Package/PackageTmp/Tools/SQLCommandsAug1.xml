@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+  <command type="create">
+    CREATE TABLE CustomerTrackedServiceItemsTbl (
+    [CustomerTrackedServiceItemsID] AUTOINCREMENT,
+    [CustomerTypeID] INT,
+    [ServiceTypeID] INT,
+    [Notes] MEMO,
+    CONSTRAINT [pk_CustomerTrackedServiceItemsID] PRIMARY KEY (CustomerTrackedServiceItemsID)
+    )
+  </command>
+  <command type="update">
+    UPDATE CustomerTypeTbl SET CustTypeDesc='Coffee And Maint', Notes="Track both coffee and all maintenance stuff"  WHERE (CustTypeID = 1)
+  </command>
+  <command type="update">
+    UPDATE CustomerTypeTbl SET CustTypeDesc='Service Contract', Notes="Service contract client, they have signed a contract with us"  WHERE (CustTypeID = 2)
+  </command>
+  <command type="update">
+    UPDATE CustomerTypeTbl SET CustTypeDesc='Coffee Only', Notes="client only takes coffee nothing else"  WHERE (CustTypeID = 3)
+  </command>
+  <command type="update">
+    UPDATE CustomerTypeTbl SET Notes="client has a machine on hp"  WHERE (CustTypeID = 4)
+  </command>
+  <command type="update">
+    UPDATE CustomerTypeTbl SET Notes="client owns a machine and takes coffee only "  WHERE (CustTypeID = 5)
+  </command>
+  <command type="update">
+    UPDATE CustomerTypeTbl SET Notes="client owns a machine and takes main and service stuff from us "  WHERE (CustTypeID = 6)
+  </command>
+  <command type="delete">
+    DELETE FROM CustomerTypeTbl WHERE CustTypeID=8
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTypeTbl (CustTypeID,CustTypeDesc, Notes) VALUES (8, 'Green Coffee Only', 'Client only takes green coffee from us')
+  </command>
+  <command type="delete">
+    DELETE FROM CustomerTypeTbl WHERE CustTypeID=9
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTypeTbl (CustTypeID,CustTypeDesc, Notes) VALUES (9, 'info only', 'only store stuff do not track it')
+  </command>
+  <command type="delete">
+    DELETE * FROM CustomerTrackedServiceItemsTbl
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (1, 2, 'coffee and main take Coffee')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (1, 1, 'coffee and main take cleaning stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (1, 4, 'coffee and main take decal stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (1, 6, 'coffee and main take cappucleaner')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (1, 10, 'coffee and main do servicing')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (2, 2, 'service clients take Coffee')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (2, 1, 'service clients take cleaning stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (2, 4, 'service clients take decal stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (2, 6, 'service clients take cappucleaner')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (2, 10, 'service clients do servicing')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (3, 2, 'coffee only clients take Coffee')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (4, 2, 'HP clients take Coffee')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (4, 1, 'HP clients take cleaning stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (4, 4, 'HP clients take decal stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (4, 6, 'HP clients take cappucleaner')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (4, 10, 'HP clients do servicing')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (5, 2, 'Client that has purchase a machine take Coffee')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (5, 1, 'Client that has purchase a machine take cleaning stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (5, 4, 'Client that has purchase a machine take decal stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (5, 6, 'Client that has purchase a machine take cappucleaner')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (5, 10, 'Client that has purchase a machine do servicing')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (6, 1, 'Service Client that take cleaning stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (6, 4, 'Service Client that take decal stuff')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (6, 6, 'Service Client that take cappucleaner')
+  </command>
+  <command type="Insert">
+    INSERT INTO CustomerTrackedServiceItemsTbl (CustomerTypeID,ServiceTypeID,Notes) VALUES (6, 10, 'Service Client that doed servicing')
+  </command>
+  <command type="select">
+    SELECT * FROM CustomerTrackedServiceItemsTbl
+  </command>
+  <command type="disable">
+    ALTER TABLE CustomersTbl ADD SendDeliveryConfirmation YESNO
+  </command>
+  <command type="alter">
+    ALTER TABLE CustomersTbl ADD LastDateSentReminder DateTime
+  </command>
+  <command type="select">
+    SELECT        TOP 10 CompanyName, SendDeliveryConfirmation
+    FROM            CustomersTbl
+  </command>
+  <command type="alter">
+    ALTER TABLE ReoccuringOrderTbl ADD [PackagingID] INT
+  </command>
+  <command type="alter">
+    ALTER TABLE ReoccuringOrderTbl ADD [DeliveryByID] INT
+  </command>
+  <command type="select">
+    SELECT        TOP 10 ID, enabled, DeliveryByID, PackagingID
+    FROM          ReoccuringOrderTbl
+  </command>
+  <command type="create">
+    CREATE TABLE TempCoffeecheckupCustomerTbl (
+    [TCCID] AUTOINCREMENT,
+    [CustomerID] INT,
+    [CompanyName] VARCHAR(50),
+    [ContactFirstName] VARCHAR(50),
+    [ContactAltFirstName] VARCHAR(50),
+    [CityID] INT,
+    [EmailAddress] VARCHAR(50),
+    [AltEmailAddress] VARCHAR(50),
+    [CustomerTypeID] INT,
+    [EquipTypeID] INT,
+    [TypicallySecToo] YESNO,
+    [PreferedAgentID] INT,
+    [SalesAgentID] INT,
+    [UsesFilter] YESNO,
+    [enabled] YESNO,
+    [AlwaysSendChkUp] YESNO,
+    [ReminderCount] INT,
+    [NextPrepDate] DateTime ,
+    [NextDeliveryDate] DateTime,
+    [NextCoffee] DateTime,
+    [NextClean] DateTime,
+    [NextFilter] DateTime,
+    [NextDescal] DateTime,
+    [NextService] DateTime,
+    CONSTRAINT [pk_TCCID] PRIMARY KEY (TCCID)
+    )
+  </command>
+  <command type="create">
+    CREATE TABLE TempCoffeecheckupItemsTbl (
+    [TCIID] AUTOINCREMENT,
+    [CustomerID] INT,
+    [ItemID] INT,
+    [ItemQty] SINGLE,
+    [ItemPrepID] INT,
+    [ItemPackagID] INT,
+    [AutoFulfill] YESNO,
+    [ReoccurOrder] YESNO,
+    [NextDateRequired] DateTime,
+    CONSTRAINT [pk_TCIID] PRIMARY KEY (TCIID)
+    )
+  </command>
+</commands>
+

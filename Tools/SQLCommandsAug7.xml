@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+  <command type="create">
+    CREATE TABLE RepairsTbl (
+    [RepairID] AUTOINCREMENT,
+    [CustomerID] INT,
+    [ContactName]  VARCHAR(50),
+    [ContactEmail]  VARCHAR(50),
+    [JobCardNumber]  VARCHAR(20),
+    [DateLogged] DateTime,
+    [LastStatusChange] DateTime,
+    [MachineTypeID] INT,
+    [MachineSerialNumber] VARCHAR(50),
+    [SwopOutMachineID] INT,
+    [MachineConditionID] INT,
+    [TakenFrother] YESNO,
+    [TakenBeanLid] YESNO,
+    [TakenWaterLid] YESNO,
+    [BrokenFrother] YESNO,
+    [BrokenBeanLid] YESNO,
+    [BrokenWaterLid] YESNO,
+    [RepairFaultID] INT,
+    [RepairFaultDesc] VARCHAR(255),
+    [RepairStatusID] INT,
+    [RelatedOrderID] INT,
+    [Notes] MEMO,
+    CONSTRAINT [pk_RepairID] PRIMARY KEY (RepairID)
+    )
+  </command>
+  <command type="create">
+    CREATE TABLE MachineConditionsTbl (
+    [MachineConditionID] AUTOINCREMENT,
+    [ConditionDesc] VARCHAR(50),
+    [SortOrder] INT,
+    [Notes] MEMO,
+    CONSTRAINT [pk_MachineConditionID] PRIMARY KEY (MachineConditionID)
+    )
+  </command>
+  <command type="create">
+    CREATE TABLE RepairFaultsTbl (
+    [RepairFaultID] AUTOINCREMENT,
+    [RepairFaultDesc] VARCHAR(50),
+    [SortOrder] INT,
+    [Notes] MEMO,
+    CONSTRAINT [pk_RepairFaultID] PRIMARY KEY (RepairFaultID)
+    )
+  </command>
+  <command type="create">
+    CREATE TABLE RepairStatusesTbl (
+    [RepairStatusID] AUTOINCREMENT,
+    [RepairStatusDesc] VARCHAR(50),
+    [EmailClient] YESNO,
+    [SortOrder] INT,
+    [Notes] MEMO,
+    CONSTRAINT [pk_RepairStatusID] PRIMARY KEY (RepairStatusID)
+    )
+  </command>
+  <command type="insert">
+    INSERT INTO MachineConditionsTbl (ConditionDesc, SortOrder) VALUES ("Damaged",0)
+  </command>
+  <command type="insert">
+    INSERT INTO MachineConditionsTbl (ConditionDesc, SortOrder) VALUES ("Good",1)
+  </command>
+  <command type="insert">
+    INSERT INTO MachineConditionsTbl (ConditionDesc, SortOrder) VALUES ("has scratches",2)
+  </command>
+  <command type="insert">
+    INSERT INTO MachineConditionsTbl (ConditionDesc, SortOrder) VALUES ("Excellent",3)
+  </command>
+  <command type="insert">
+    INSERT INTO MachineConditionsTbl (ConditionDesc, SortOrder) VALUES ("new",4)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairFaultsTbl (RepairFaultDesc, SortOrder) VALUES ("Service", 0)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairFaultsTbl (RepairFaultDesc, SortOrder) VALUES ("Service if required", 1)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairFaultsTbl (RepairFaultDesc, SortOrder) VALUES ("Check grinder",2)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairFaultsTbl (RepairFaultDesc, SortOrder) VALUES ("insect problem" ,3)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairStatusesTbl (RepairStatusDesc,EmailClient, SortOrder) VALUES ("logged", 1 ,0)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairStatusesTbl (RepairStatusDesc,EmailClient, SortOrder) VALUES ("collected", 1 ,1)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairStatusesTbl (RepairStatusDesc,EmailClient, SortOrder) VALUES ("workshop", 1 ,2)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairStatusesTbl (RepairStatusDesc,EmailClient, SortOrder) VALUES ("waiting for part", 1 ,3)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairStatusesTbl (RepairStatusDesc,EmailClient, SortOrder) VALUES ("estimate", 1 ,4)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairStatusesTbl (RepairStatusDesc,EmailClient, SortOrder) VALUES ("ready", 1 ,5)
+  </command>
+  <command type="insert">
+    INSERT INTO RepairStatusesTbl (RepairStatusDesc,EmailClient, SortOrder) VALUES ("done", 1 ,6)
+  </command>
+</commands>
+

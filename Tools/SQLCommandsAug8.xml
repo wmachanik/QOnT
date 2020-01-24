@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+  <command type="alter">
+    ALTER TABLE SysDataTbl ADD MinReminderDate DATETIME
+  </command>
+</commands>
+

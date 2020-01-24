@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OpenOrdersDataSet" targetNamespace="http://tempuri.org/OpenOrdersDataSet.xsd" xmlns:mstns="http://tempuri.org/OpenOrdersDataSet.xsd" xmlns="http://tempuri.org/OpenOrdersDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="Tracker08ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Tracker08ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.Tracker08ConnectionString.ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrdersToDoQryTableAdapter" GeneratorDataComponentClassName="OrdersToDoQryTableAdapter" Name="OrdersToDoQry" UserDataComponentName="OrdersToDoQryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Tracker08ConnectionString (Web.config)" DbObjectName="OrdersToDoQry" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CoName, CompanyName, ContactFirstName, ContactLastName, EmailAddress, OrderDate, RoastDate, ItemDesc, QuantityOrdered, Expr1009, RequiredByDate, 
+                         ToBeDeliveredBy, Person, Abreviation, Done, Notes
+FROM            OrdersToDoQry
+ORDER BY CoName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CoName" DataSetColumn="CoName" />
+              <Mapping SourceColumn="CompanyName" DataSetColumn="CompanyName" />
+              <Mapping SourceColumn="ContactFirstName" DataSetColumn="ContactFirstName" />
+              <Mapping SourceColumn="ContactLastName" DataSetColumn="ContactLastName" />
+              <Mapping SourceColumn="EmailAddress" DataSetColumn="EmailAddress" />
+              <Mapping SourceColumn="OrderDate" DataSetColumn="OrderDate" />
+              <Mapping SourceColumn="RoastDate" DataSetColumn="RoastDate" />
+              <Mapping SourceColumn="ItemDesc" DataSetColumn="ItemDesc" />
+              <Mapping SourceColumn="QuantityOrdered" DataSetColumn="QuantityOrdered" />
+              <Mapping SourceColumn="Expr1009" DataSetColumn="Expr1009" />
+              <Mapping SourceColumn="RequiredByDate" DataSetColumn="RequiredByDate" />
+              <Mapping SourceColumn="ToBeDeliveredBy" DataSetColumn="ToBeDeliveredBy" />
+              <Mapping SourceColumn="Person" DataSetColumn="Person" />
+              <Mapping SourceColumn="Abreviation" DataSetColumn="Abreviation" />
+              <Mapping SourceColumn="Done" DataSetColumn="Done" />
+              <Mapping SourceColumn="Notes" DataSetColumn="Notes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OpenOrdersDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OpenOrdersDataSet" msprop:Generator_UserDSName="OpenOrdersDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrdersToDoQry" msprop:Generator_TableClassName="OrdersToDoQryDataTable" msprop:Generator_TableVarName="tableOrdersToDoQry" msprop:Generator_TablePropName="OrdersToDoQry" msprop:Generator_RowDeletingName="OrdersToDoQryRowDeleting" msprop:Generator_UserTableName="OrdersToDoQry" msprop:Generator_RowChangingName="OrdersToDoQryRowChanging" msprop:Generator_RowEvHandlerName="OrdersToDoQryRowChangeEventHandler" msprop:Generator_RowDeletedName="OrdersToDoQryRowDeleted" msprop:Generator_RowEvArgName="OrdersToDoQryRowChangeEvent" msprop:Generator_RowChangedName="OrdersToDoQryRowChanged" msprop:Generator_RowClassName="OrdersToDoQryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CoName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCoName" msprop:Generator_ColumnPropNameInRow="CoName" msprop:Generator_ColumnPropNameInTable="CoNameColumn" msprop:Generator_UserColumnName="CoName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactFirstName" msprop:Generator_ColumnVarNameInTable="columnContactFirstName" msprop:Generator_ColumnPropNameInRow="ContactFirstName" msprop:Generator_ColumnPropNameInTable="ContactFirstNameColumn" msprop:Generator_UserColumnName="ContactFirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactLastName" msprop:Generator_ColumnVarNameInTable="columnContactLastName" msprop:Generator_ColumnPropNameInRow="ContactLastName" msprop:Generator_ColumnPropNameInTable="ContactLastNameColumn" msprop:Generator_UserColumnName="ContactLastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmailAddress" msprop:Generator_ColumnVarNameInTable="columnEmailAddress" msprop:Generator_ColumnPropNameInRow="EmailAddress" msprop:Generator_ColumnPropNameInTable="EmailAddressColumn" msprop:Generator_UserColumnName="EmailAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderDate" msprop:Generator_ColumnVarNameInTable="columnOrderDate" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_UserColumnName="OrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RoastDate" msprop:Generator_ColumnVarNameInTable="columnRoastDate" msprop:Generator_ColumnPropNameInRow="RoastDate" msprop:Generator_ColumnPropNameInTable="RoastDateColumn" msprop:Generator_UserColumnName="RoastDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ItemDesc" msprop:Generator_ColumnVarNameInTable="columnItemDesc" msprop:Generator_ColumnPropNameInRow="ItemDesc" msprop:Generator_ColumnPropNameInTable="ItemDescColumn" msprop:Generator_UserColumnName="ItemDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QuantityOrdered" msprop:Generator_ColumnVarNameInTable="columnQuantityOrdered" msprop:Generator_ColumnPropNameInRow="QuantityOrdered" msprop:Generator_ColumnPropNameInTable="QuantityOrderedColumn" msprop:Generator_UserColumnName="QuantityOrdered" type="xs:float" minOccurs="0" />
+              <xs:element name="Expr1009" msprop:Generator_ColumnVarNameInTable="columnExpr1009" msprop:Generator_ColumnPropNameInRow="Expr1009" msprop:Generator_ColumnPropNameInTable="Expr1009Column" msprop:Generator_UserColumnName="Expr1009" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RequiredByDate" msprop:Generator_ColumnVarNameInTable="columnRequiredByDate" msprop:Generator_ColumnPropNameInRow="RequiredByDate" msprop:Generator_ColumnPropNameInTable="RequiredByDateColumn" msprop:Generator_UserColumnName="RequiredByDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ToBeDeliveredBy" msprop:Generator_ColumnVarNameInTable="columnToBeDeliveredBy" msprop:Generator_ColumnPropNameInRow="ToBeDeliveredBy" msprop:Generator_ColumnPropNameInTable="ToBeDeliveredByColumn" msprop:Generator_UserColumnName="ToBeDeliveredBy" type="xs:int" minOccurs="0" />
+              <xs:element name="Person" msprop:Generator_ColumnVarNameInTable="columnPerson" msprop:Generator_ColumnPropNameInRow="Person" msprop:Generator_ColumnPropNameInTable="PersonColumn" msprop:Generator_UserColumnName="Person" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Abreviation" msprop:Generator_ColumnVarNameInTable="columnAbreviation" msprop:Generator_ColumnPropNameInRow="Abreviation" msprop:Generator_ColumnPropNameInTable="AbreviationColumn" msprop:Generator_UserColumnName="Abreviation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Done" msprop:Generator_ColumnVarNameInTable="columnDone" msprop:Generator_ColumnPropNameInRow="Done" msprop:Generator_ColumnPropNameInTable="DoneColumn" msprop:Generator_UserColumnName="Done" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

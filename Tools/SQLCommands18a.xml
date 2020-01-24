@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="select">
+		SELECT CompanyName, CustomerID FROM CustomersTbl GROUP BY CompanyName HAVING COUNT(CompanyName)>1
+	</command>
+	<command type="select">
+		SELECT CustomerID, CustomerID FROM CustomersAccInfoTbl GROUP BY CustomerID HAVING COUNT(CustomerID)>1
+	</command>
+	<command type="update">
+		UPDATE CustomersTbl SET CompanyName = CompanyName & CustomerID WHERE CompanyName IN (
+		SELECT CompanyName FROM CustomersTbl GROUP BY CompanyName HAVING COUNT(CompanyName)>1)
+	</command>
+	<command type="select">
+		SELECT CustomerID, COUNT(CustomerID) AS CountCompanyIDS FROM CustomersAccInfoTbl GROUP BY CustomerID HAVING COUNT(CustomerID)>1
+	</command>
+	<command type="alter">
+		ALTER TABLE CustomersAccInfoTbl
+		ADD CONSTRAINT UCID_CustomerID UNIQUE (CustomerID)
+	</command>
+	<command type="insert">
+		ALTER TABLE CustomersTbl
+		ADD CONSTRAINT UCCN_CompanyName UNIQUE (CompanyName)
+	</command>
+</commands>
+

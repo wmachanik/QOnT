@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+  <command type="insert">
+		INSERT INTO PaymentTermsTbl (PaymentTermDesc,PaymentDays,DayOfMonth,UseDays,Enabled,Notes) VALUES ('Due on receipt',1,0,1,1,'COD')
+	</command>
+  <command type="insert">
+    INSERT INTO PaymentTermsTbl (PaymentTermDesc,PaymentDays,DayOfMonth,UseDays,Enabled,Notes) VALUES ('MidMonth',0,15,0,1,'15th of month')
+	</command>
+  <command type="insert">
+    INSERT INTO PaymentTermsTbl (PaymentTermDesc,PaymentDays,DayOfMonth,UseDays,Enabled,Notes) VALUES ('Net 15',15,0,1,1,'15 days')
+	</command>
+  <command type="insert">
+    INSERT INTO PaymentTermsTbl (PaymentTermDesc,PaymentDays,DayOfMonth,UseDays,Enabled,Notes) VALUES ('Net 30',30,0,1,1,'30 days')
+	</command>
+  <command type="insert">
+    INSERT INTO PaymentTermsTbl (PaymentTermDesc,PaymentDays,DayOfMonth,UseDays,Enabled,Notes) VALUES ('OnStatement',0,1,0,1,'1st of month')
+	</command>
+</commands>
+

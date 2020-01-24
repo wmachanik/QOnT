@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+  <command type="create">
+    CREATE TABLE SendCheckEmailTextsTbl (
+    [SCEMTID] AUTOINCREMENT,
+    [Header] MEMO,
+    [Body] MEMO,
+    [Footer] MEMO,
+    [DateLastChange] DateTime,
+    [Notes] MEMO,
+    CONSTRAINT [pk_SCEMTID] PRIMARY KEY (SCEMTID)
+    )
+
+  </command>
+  <command type="insert">
+    INSERT INTO SendCheckEmailTextsTbl (Header,Body,Footer) VALUES ("Welcome to Quaffee's Coffee Checkup",
+    "We are next bulk roasting coffee on: [%PREPDATE%], we will be delivering from the following day.<br /><br />We appreciate a reply, especially if the system has got it correct in calculating you may need in the next 10 days.","Have your say about coffee on the Quaffee group page on facebook")
+  </command>
+</commands>
+

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="select">
+		SELECT CustomerID, CustomerName, enabled FROM CustomersTbl
+	</command>
+	<command type="select">
+    SELECT CustomerID, CustomerName, enabled FROM CustomersTbl LEFT JOIN ItemUsageTbl ON CustomersTbl.[CustomerID] = ItemUsageTbl.[CustomerID] WHERE (CustomersTbl.CompanyName Not Like "Demo*") AND (ItemUsageTbl.CustomerID is Null)
+  </command>
+	<command type="update">
+		UPDATE CustomersTbl A set A.enabled=false WHERE A.CustomerID IN (SELECT B.CustomerID FROM CustomersTbl B LEFT JOIN ItemUsageTbl ON B.[CustomerID] = ItemUsageTbl.[CustomerID] WHERE (B.CompanyName Not Like "Demo*") AND (ItemUsageTbl.CustomerID is Null));
+  </command>
+</commands>
+

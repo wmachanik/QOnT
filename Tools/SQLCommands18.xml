@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="select">
+		SELECT CompanyName, COUNT(CompanyName) AS CountCoName FROM CustomersTbl GROUP BY CompanyName HAVING COUNT(CompanyName)>1
+	</command>
+	<command type="select">
+		SELECT CustomerID, CompanyName, enabled, MachineSN FROM CustomersTbl WHERE CompanyName="Rhodes University Dept of Comp Science"
+	</command>
+	<command type="select">
+		SELECT CustomerID, COUNT(CustomerID) AS CountID FROM CustomersAccInfoTbl GROUP BY CustomerID HAVING COUNT(CustomerID)>1
+	</command>
+	<command type="163">
+		DELETE FROM CustomersTbl WHERE (CustomerID= 163)
+	</command>
+	<command type="695">
+		DELETE FROM CustomersTbl WHERE (CustomerID= 695)
+	</command>
+	<command type="delete -1">
+		DELETE FROM CustomersAccInfoTbl WHERE (CustomerID=-1)
+	</command>
+	<command type="alter">
+		ALTER TABLE CustomersAccInfoTbl
+		ADD CONSTRAINT UCID_CustomerID UNIQUE (CustomerID)
+	</command>
+	<command type="alter">
+		ALTER TABLE CustomersTbl
+		ADD CONSTRAINT UCCN_CompanyName UNIQUE (CompanyName)
+	</command>
+	<command type="create">
+		CREATE INDEX UCEM_EmailAddress
+		ON CustomersTbl (EmailAddress)
+	</command>
+	<command type="create">
+		CREATE INDEX UCALTEM_AltEmailAddress
+		ON CustomersTbl (AltEmailAddress)
+	</command>
+
+</commands>
+

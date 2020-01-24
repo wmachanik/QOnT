@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="create">
+		CREATE TABLE ItemGroupTbl (
+		[ItemGroupID] AUTOINCREMENT,
+		[GroupItemTypeID] INT,
+		[ItemTypeID] INT,
+		[ItemTypeSortPos] INT,
+		[Enabled] YESNO,
+		[Notes] MEMO,
+		CONSTRAINT [pk_ItemGroupID] PRIMARY KEY (ItemGroupID)
+		)
+	</command>
+</commands>

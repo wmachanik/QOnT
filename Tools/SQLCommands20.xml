@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="alter">
+		ALTER TABLE TempCoffeecheckupCustomerTbl ADD RequiresPurchOrder YESNO
+  </command>
+</commands>
+

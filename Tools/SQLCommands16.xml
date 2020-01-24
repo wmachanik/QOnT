@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="disabled">
+		This is where we start after the merge integration - need to rename manually in Access
+	</command>
+	<command type="alter">
+		ALTER TABLE PaymentTermsTbl
+		RENAME COLUMN PaymentTermsID to PaymentTermID;
+	</command>
+	<command type="alter">
+		ALTER TABLE PaymentTermsTbl
+		RENAME COLUMN PaymentTermsDesc to PaymentTermDesc;
+	</command>
+	<command type="alter">
+		ALTER TABLE CustomersAccInfoTbl
+		RENAME COLUMN PaymentTermsID to PaymentTermID;
+	</command>
+
+</commands>
+

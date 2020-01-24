@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+	<command type="alter">
+		ALTER TABLE PriceLevelsTbl
+		ADD CONSTRAINT UIT_PriceLevelDesc UNIQUE (PriceLevelDesc)
+	</command>
+
+	<command type="insert">
+		INSERT INTO PriceLevelsTbl (PriceLevelDesc,PricingFactor,Enabled,Notes) VALUES ('Standard',1,1,'no chage in price or acccount price')
+	</command>
+  <command type="insert">
+		INSERT INTO PriceLevelsTbl (PriceLevelDesc,PricingFactor,Enabled,Notes) VALUES ('Family/Charity/Agent',0.85,1,'15% discount')
+	</command>
+  <command type="insert">
+		INSERT INTO PriceLevelsTbl (PriceLevelDesc,PricingFactor,Enabled,Notes) VALUES ('RRP',1.1,1,'Web price')
+	</command>
+  <command type="insert">
+		INSERT INTO PriceLevelsTbl (PriceLevelDesc,PricingFactor,Enabled,Notes) VALUES ('Dealer',0.9,1,'Discount for dealers')
+	</command>
+	<command type="insert">
+		INSERT INTO PriceLevelsTbl (PriceLevelDesc,PricingFactor,Enabled,Notes) VALUES ('Host',0.7,1,'Discount for a host/landlord')
+	</command>
+	<command type="insert">
+		INSERT INTO PriceLevelsTbl (PriceLevelDesc,PricingFactor,Enabled,Notes) VALUES ('Pensioner',0.9,1,'Pensioner Discount')
+	</command>
+	<command type="insert">
+		INSERT INTO PriceLevelsTbl (PriceLevelDesc,PricingFactor,Enabled,Notes) VALUES ('RemoteAgent',0.85,1,'Remote agetns do not get com we give them a discount')
+	</command>
+</commands>
+

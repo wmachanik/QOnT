@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+  <command type="create">
+    CREATE TABLE ItemUnitsTbl (
+    [ItemUnitID] AUTOINCREMENT,
+    [UnitOfMeasure] VARCHAR(5),
+    [UnitDescription] VARCHAR(50),
+    CONSTRAINT [pk_ItemUnitsID] PRIMARY KEY (ItemUnitID)
+    )
+  </command>
+  <command type="alter">
+    ALTER TABLE ItemTypeTbl ADD ItemUnitID INT
+  </command>
+  <command type="insert">
+    INSERT INTO ItemUnitsTbl (UnitOfMeasure, UnitDescription) VALUES ("kg","kilograms");
+  </command>
+  <command type="insert">
+    INSERT INTO ItemUnitsTbl (UnitOfMeasure, UnitDescription) VALUES ("box","box");
+  </command>
+  <command type="insert">
+    INSERT INTO ItemUnitsTbl (UnitOfMeasure, UnitDescription) VALUES ("btl","bottle");
+  </command>>
+  <command type="update">
+    UPDATE ItemTypeTbl SET ItemUnitID=1 WHERE ServiceTypeID=2 OR ServiceTypeID=19
+  </command>
+  <command type="update">
+    UPDATE ItemTypeTbl SET ItemUnitID=2 WHERE ItemUnitID=26 OR ItemUnitID=97
+  </command>
+  <command type="update">
+    UPDATE ItemTypeTbl SET ItemUnitID=3 WHERE ItemUnitID=9 OR ItemUnitID=30
+  </command>
+
+
+</commands>
+

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commands>
+  <command type="alter">
+    ALTER TABLE NextRoastDateByCityTbl ADD NextPreperationDate DATETIME
+  </command>
+  <command type="insert">
+    ALTER TABLE NextRoastDateByCityTbl ADD NextDeliveryDate DATETIME
+  </command>
+</commands>
+
